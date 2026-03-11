@@ -2,12 +2,14 @@ version: 0.0
 os: windows
 
 files:
-  - source: \
-    destination: C:\pramodweb
+  - source: publish
+    destination: C:\inetpub\wwwroot\PramodApi
 
 hooks:
-  ApplicationStop:
+  BeforeInstall:
     - location: scripts\stop.ps1
+      timeout: 300
+
   ApplicationStart:
     - location: scripts\start.ps1
-
+      timeout: 300
