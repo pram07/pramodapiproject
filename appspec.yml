@@ -7,9 +7,11 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: scripts\stop.ps1
+    - location: scripts/stop.ps1
       timeout: 300
+      runas: Administrator
 
   ApplicationStart:
-    - location: scripts\start.ps1
+    - location: scripts/start.ps1
       timeout: 300
+      runas: Administrator
