@@ -12,5 +12,6 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
-  base-directory: publish
+    - appspec.yml
+    - scripts/**/*
+    - publish/**/*
